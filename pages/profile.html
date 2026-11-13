@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradio - Profile</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <main class="auth-container profile-container">
+        <a class="profile-back-link" href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m15 18-6-6 6-6"/>
+            </svg>
+            Back to home
+        </a>
+
+        <header class="profile-heading">
+            <h1>Your profile</h1>
+            <p>Choose how you appear to other people.</p>
+        </header>
+
+        <form id="profile-form">
+            <section class="profile-photo-field" aria-labelledby="photo-label">
+                <div class="profile-photo-preview">
+                    <img id="avatar-preview" alt="Profile photo preview" hidden>
+                    <svg id="avatar-placeholder" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+
+                <div class="profile-photo-details">
+                    <h2 id="photo-label">Profile photo</h2>
+                    <p>Use a clear image so people can recognize you.</p>
+                    <div class="profile-photo-actions">
+                        <label class="profile-button profile-button--secondary" for="avatar-file">Choose photo</label>
+                        <button id="remove-avatar" class="profile-button profile-button--quiet" type="button" hidden>Remove photo</button>
+                    </div>
+                    <input id="avatar-file" class="profile-file-input" type="file" accept="image/png,image/jpeg,image/webp">
+                    <small>PNG, JPEG or WebP · up to 5 MB</small>
+                </div>
+            </section>
+
+            <div class="profile-field">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" minlength="3" maxlength="24" autocomplete="nickname" placeholder="e.g. AlexTrader" pattern="[A-Za-z0-9_]{3,24}" aria-describedby="username-help">
+                <small id="username-help">3–24 letters, numbers or underscores. Your username must be unique.</small>
+            </div>
+
+            <button id="save-profile" class="profile-button profile-button--primary" type="submit">Save changes</button>
+        </form>
+
+        <p id="profile-message" role="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="../js/profile.js"></script>
+</body>
+</html>

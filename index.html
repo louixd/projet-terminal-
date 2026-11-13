@@ -17,13 +17,20 @@
                 <ul class="navbar__list">
                     <li class="navbar__item"><a href="pages/graphique.html" class="navbar__link">Charts</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">Markets</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Products</a></li>
+                    <li class="navbar__item"><a href="pages/pricing.html" class="navbar__link">Pricing</a></li>
                     <li class="navbar__item navbar__item--cta">
-                        <a href="pages/register.html" class="navbar__link navbar__link--cta">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user preview-icon">
+                        <a id="account-link" href="pages/register.html" class="navbar__link navbar__link--cta navbar__profile-trigger" aria-label="Register" title="Register">
+                          <img id="account-avatar" class="navbar__avatar-image" alt="" hidden>
+                          <svg id="account-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user preview-icon">
                                 <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
                                 <circle cx="12" cy="7" r="4"/>
                             </svg>
+                          <span id="account-edit-indicator" class="navbar__profile-edit" aria-hidden="true" hidden>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M12 20h9"/>
+                              <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/>
+                            </svg>
+                          </span>
                         </a>
                     </li>
                 </ul>
@@ -32,7 +39,7 @@
     </header>
 
     <main>
-        <script src="js/home.js"></script>
+        <script type="module" src="js/home.js"></script>
     </main>
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/pricing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+  </head>
+  <body>
+<section class="pricing-section">
+  <div class="pricing-header">
+    <h2>Simple, transparent pricing</h2>
+    <p>No hidden fees. No surprise charges.</p>
+    
+    <!-- Toggle Switch -->
+    <div class="toggle-container">
+      <span class="toggle-label" id="label-monthly">Monthly</span>
+      <label class="switch">
+        <input type="checkbox" id="pricing-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label" id="label-annually">
+        Annually <span class="badge">Save 20%</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="pricing-cards">
+    <!-- Starter Plan -->
+    <div class="pricing-card">
+      <h3>Starter</h3>
+      <p class="plan-desc">Perfect for individuals starting out.</p>
+      <div class="price">
+        <span class="currency">$</span>
+        <span class="amount" data-monthly="15" data-annually="12">15</span>
+        <span class="period">/mo</span>
+      </div>
+      <ul class="features">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Project</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic Analytics</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 24-hour Support</li>
+      </ul>
+      <a href="#" class="btn btn-outline">Get Started</a>
+    </div>
+
+    <!-- Pro Plan (Highlighted) -->
+    <div class="pricing-card highlighted">
+      <div class="popular-badge">Most Popular</div>
+      <h3>Pro</h3>
+      <p class="plan-desc">Ideal for growing teams and startups.</p>
+      <div class="price">
+        <span class="currency">$</span>
+        <span class="amount" data-monthly="49" data-annually="39">49</span>
+        <span class="period">/mo</span>
+      </div>
+      <ul class="features">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited Projects</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced Analytics</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 1-hour Support Response</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Domains</li>
+      </ul>
+      <a href="#" class="btn btn-primary">Start Free Trial</a>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="pricing-card">
+      <h3>Enterprise</h3>
+      <p class="plan-desc">Advanced security and support for scale.</p>
+      <div class="price">
+        <span class="currency">$</span>
+        <span class="amount" data-monthly="99" data-annually="79">99</span>
+        <span class="period">/mo</span>
+      </div>
+      <ul class="features">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Pro</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Contracts</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Account Manager</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> SSO Integration</li>
+      </ul>
+      <a href="#" class="btn btn-outline">Contact Sales</a>
+    </div>
+  </div>
+</section>
+    <script src="../js/pricing.js"></script>
+  </body>
+</html>

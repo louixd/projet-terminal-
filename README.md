@@ -1,11 +1,21 @@
-pouvoir se connecter = pouvoir prendre une position sinon pas possible 
-->login foncitonnel avec un server ou en local qui stock les données 
--> Buy and Sell pour prendre des positions comme dans tv (stockage des données sur un server pour avoir accès à ces investissement de partout / ou avec la connection de login)
+->pouvoir se connecter = pouvoir prendre une position sinon pas possible 
 
-Personnalisation de la charts 
+->login foncitonnel avec un server ou en local qui stock les données (fait)
 
-différents outils comme dans tv (volume profile fibbonaci etc)
+-> Buy and Sell pour prendre des positions comme dans tv (
+stockage des données sur un server pour avoir accès à ces investissement de partout / ou avec la connection de login)
 
+-> Leverage (personnalisation du leverage selon la position)
+
+->Personnalisation de la charts (différents outils comme dans tv : volume profile fibbonaci etc)
+
+-> Carnet de trades (stockage des positions)
+
+->leaderboard + gros PNL 
+
+-> pseudonoyme = Icone compte avec menu déroulant 
+
+-> Revoir l'interface graphique (vidéo de présentation / Screenshot)
 
 
 https://www.radix-ui.com/primitives/docs/components/alert-dialog
@@ -18,4 +28,4 @@ https://www.radix-ui.com/primitives/docs/components/one-time-password-field
 https://www.radix-ui.com/primitives/docs/components/password-toggle-field
 
 
-psw : s)IS'&-41N[4|*Uuxt19C7>{tcu"W{
+Password: s)IS'&-41N[4|*Uuxt19C7>{tcu"W{

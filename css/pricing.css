@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: #050505;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.pricing-section {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pricing-header h2 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.pricing-header p {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  margin: 0 0 30px 0;
+}
+
+/* --- TOGGLE SWITCH --- */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.toggle-label {
+  font-weight: 500;
+  color: #a1a1aa;
+  transition: color 0.3s;
+}
+
+.toggle-label.active {
+  color: #fff;
+}
+
+.badge {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 8px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #27272a;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #6366f1;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* --- CARDS --- */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  align-items: center; /* Keeps cards vertically aligned */
+}
+
+.pricing-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px 30px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-card.highlighted {
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.15);
+  padding: 50px 30px; /* Slightly taller */
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  margin: 0 0 8px 0;
+}
+
+.plan-desc {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  margin: 0 0 30px 0;
+  height: 40px; /* Aligns heights */
+}
+
+.price {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: baseline;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #a1a1aa;
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin: 0 4px;
+}
+
+.period {
+  color: #a1a1aa;
+  font-size: 1rem;
+}
+
+/* Features List */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #e4e4e7;
+  font-size: 0.95rem;
+}
+
+.features svg {
+  width: 20px;
+  height: 20px;
+  color: #818cf8;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #050505;
+}
+
+.btn-primary:hover {
+  background: #e4e4e7;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Tablet & Mobile */
+@media (max-width: 900px) {
+  .pricing-card.highlighted {
+    padding: 40px 30px;
+  }
+}
