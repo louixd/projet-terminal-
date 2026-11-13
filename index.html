@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tradio</title>
@@ -9,18 +9,18 @@
 <body>
         <header class="navbar">
         <div class="navbar__container">
-            <a href="#" class="navbar__brand">Tradio</a>
+            <a href="about.html" class="navbar__brand"><h2>Tradio</h2></a>
             <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation" aria-controls="navbarMenu" aria-expanded="false">
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </button>
             <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
                 <ul class="navbar__list">
-                    <li class="navbar__item"><a href="#" class="navbar__link">more</a></li>
+                    <li class="navbar__item"><a href="pages/graphique.html" class="navbar__link">Charts</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">Markets</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">Products</a></li>
                     <li class="navbar__item navbar__item--cta">
-                        <a href="#" class="navbar__link navbar__link--cta">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user preview-icon">
+                        <a href="pages/register.html" class="navbar__link navbar__link--cta">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user preview-icon">
                                 <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
                                 <circle cx="12" cy="7" r="4"/>
                             </svg>
@@ -32,20 +32,7 @@
     </header>
 
     <main>
-            <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navbarToggle = document.getElementById('navbarToggle');
-            const navbarMenu = document.getElementById('navbarMenu');
-            if (navbarToggle && navbarMenu) {
-                navbarToggle.addEventListener('click', function () {
-                    navbarToggle.classList.toggle('is-active');
-                    navbarMenu.classList.toggle('is-active');
-                    const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
-                    navbarToggle.setAttribute('aria-expanded', !isExpanded);
-                });
-            }
-        });
-    </script>
+        <script src="js/home.js"></script>
     </main>
 </body>
 </html>
