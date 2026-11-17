@@ -52,15 +52,15 @@ body {
 }
 
 .auth-container button {
-    border-color: #6acf0c;
-    color: #101010;
-    background: #6acf0c;
+    border-color: #41007e;
+    color: #fff;
+    background: #41007e;
     font-weight: 700;
     cursor: pointer;
 }
 
 .auth-container a {
-    color: #9be65a;
+    color: #41007e;
 }
 
 #message {

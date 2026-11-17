@@ -39,6 +39,19 @@
     </header>
 
     <main>
+        <h1 class="home-title">Tradio™</h1>
+        <section class="card-10" aria-labelledby="leaderboard-title">
+            <article class="card-10__card">
+                <header class="card-10__head">
+                    <h2 class="card-10__title" id="leaderboard-title">Leaderboard</h2>
+                    <div class="card-10__filter" role="tablist" aria-label="Timeframe">
+                        <button type="button" role="tab" aria-selected="false" class="card-10__filter-btn">Week</button>
+                        <button type="button" role="tab" aria-selected="true" class="card-10__filter-btn card-10__filter-btn--active">Month</button>
+                    </div>
+                </header>
+                <ol class="card-10__list" aria-label="Leaderboard rankings"></ol>
+            </article>
+        </section>
         <script type="module" src="js/home.js"></script>
     </main>
 </body>

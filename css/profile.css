@@ -8,12 +8,18 @@
     display: none !important;
 }
 
-.profile-back-link {
+.auth-container .profile-back-link {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
     margin-bottom: 1.75rem;
-    color: #9be65a;
+    color: #fff;
+    transition: transform 160ms ease;
+    text-decoration: none;
+}
+
+.profile-back-link:hover {
+    transform: scale(1.03);
 }
 
 .profile-heading {
@@ -102,7 +108,7 @@
 }
 
 .profile-photo-actions:focus-within .profile-button--secondary {
-    outline: 3px solid #9be65a;
+    outline: 3px solid #41007e;
     outline-offset: 3px;
 }
 
@@ -129,8 +135,10 @@
 }
 
 .profile-field input:focus-visible {
-    border-color: #9be65a;
-    box-shadow: 0 0 0 3px rgb(155 230 90 / 15%);
+    border-color: #41007e;
+    outline: 2px solid #41007e;
+    outline-offset: 2px;
+    box-shadow: none;
 }
 
 .profile-button {
@@ -146,18 +154,19 @@
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 160ms ease, border-color 160ms ease, opacity 160ms ease;
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.profile-button:not(:disabled):hover {
+    color: #fff;
+    transform: scale(1.03);
 }
 
 .profile-button--primary {
     width: 100%;
     min-height: 3rem;
-    color: #101010;
-    background: #9be65a;
-}
-
-.profile-button--primary:hover {
-    background: #b0f17a;
+    color: #fff;
+    background: #41007e;
 }
 
 .profile-button--secondary {
@@ -167,8 +176,8 @@
 }
 
 .profile-button--secondary:hover {
-    border-color: #666;
-    background: #303030;
+    border-color: #41007e;
+    background: #41007e;
 }
 
 .profile-button--quiet {
@@ -178,11 +187,11 @@
 
 .profile-button--quiet:hover {
     color: #fff;
-    background: #292929;
+    background: #41007e;
 }
 
 .profile-button:focus-visible {
-    outline: 3px solid #9be65a;
+    outline: 3px solid #41007e;
     outline-offset: 3px;
 }
 
