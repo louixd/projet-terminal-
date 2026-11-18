@@ -16,14 +16,6 @@ supabase.auth.onAuthStateChange((event, session) => {
 
 });
 
-// Vérification initiale de la session
-const { data: { session } } =
-    await supabase.auth.getSession();
-
-if (session) {
-    recoverySession = true;
-}
-
 form.addEventListener('submit', async (event) => {
 
     event.preventDefault();
@@ -34,13 +26,13 @@ form.addEventListener('submit', async (event) => {
         document.getElementById('confirm-password').value;
 
     if (password !== confirmation) {
-        message.textContent = 'Passwords do not match.';
+        message.textContent = 'Les mots de passe ne correspondent pas.';
         return;
     }
 
     if (!recoverySession) {
         message.textContent =
-            'Invalid or expired recovery link.';
+            'Le lien de vérification est invalide ou a expiré.';
         return;
     }
 
@@ -48,7 +40,7 @@ form.addEventListener('submit', async (event) => {
 
         await updatePassword(password);
 
-        message.textContent = 'Password successfully updated!';
+        message.textContent = 'Mot de passe modifié avec succès.';
 
         setTimeout(() => {
             window.location.href = 'login.html';
@@ -56,7 +48,9 @@ form.addEventListener('submit', async (event) => {
 
     } catch (error) {
 
-        message.textContent = error.message;
+        message.textContent = error instanceof Error
+            ? error.message
+            : 'Impossible de modifier le mot de passe. Veuillez réessayer.';
 
     }
 

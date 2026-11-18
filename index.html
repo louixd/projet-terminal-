@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/theme-init.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/theme.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tradio</title>
@@ -43,13 +45,13 @@
         <section class="card-10" aria-labelledby="leaderboard-title">
             <article class="card-10__card">
                 <header class="card-10__head">
-                    <h2 class="card-10__title" id="leaderboard-title">Leaderboard</h2>
-                    <div class="card-10__filter" role="tablist" aria-label="Timeframe">
-                        <button type="button" role="tab" aria-selected="false" class="card-10__filter-btn">Week</button>
-                        <button type="button" role="tab" aria-selected="true" class="card-10__filter-btn card-10__filter-btn--active">Month</button>
+                    <h2 class="card-10__title" id="leaderboard-title">Leaderboard P&L</h2>
+                    <div class="card-10__filter" role="group" aria-label="Leaderboard period">
+                        <button type="button" class="card-10__filter-btn" data-period="week" aria-pressed="false">Week</button>
+                        <button type="button" class="card-10__filter-btn card-10__filter-btn--active" data-period="month" aria-pressed="true">Month</button>
                     </div>
                 </header>
-                <ol class="card-10__list" aria-label="Leaderboard rankings"></ol>
+                <ol class="card-10__list" id="leaderboard-list" aria-label="Leaderboard rankings" aria-live="polite"></ol>
             </article>
         </section>
         <script type="module" src="js/home.js"></script>

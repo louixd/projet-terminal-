@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 body {
-  background-color: #050505;
+  background-color: #15111b;
   color: #fff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   margin: 0;
@@ -54,14 +54,14 @@ body {
 }
 
 .badge {
-  background: rgba(99, 102, 241, 0.15);
-  color: #818cf8;
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
   padding: 4px 10px;
   border-radius: 99px;
   font-size: 0.75rem;
   font-weight: 600;
   margin-left: 8px;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
 .switch {
@@ -81,7 +81,7 @@ body {
   position: absolute;
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #27272a;
+  background-color: #30283a;
   transition: .4s;
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #6366f1;
+  background-color: #7c3aed;
 }
 
 input:checked + .slider:before {
@@ -121,8 +121,8 @@ input:checked + .slider:before {
 }
 
 .pricing-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #211b29;
+  border: 1px solid rgba(167, 139, 250, 0.16);
   border-radius: 24px;
   padding: 40px 30px;
   position: relative;
@@ -134,9 +134,9 @@ input:checked + .slider:before {
 }
 
 .pricing-card.highlighted {
-  background: linear-gradient(180deg, rgba(99, 102, 241, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
-  border: 1px solid rgba(99, 102, 241, 0.5);
-  box-shadow: 0 0 30px rgba(99, 102, 241, 0.15);
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.16) 0%, #211b29 100%);
+  border: 1px solid rgba(167, 139, 250, 0.42);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.14);
   padding: 50px 30px; /* Slightly taller */
 }
 
@@ -145,13 +145,13 @@ input:checked + .slider:before {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #6366f1, #a855f7);
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
   color: white;
   padding: 6px 16px;
   border-radius: 99px;
   font-size: 0.8rem;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
 }
 
 .pricing-card h3 {
@@ -210,7 +210,7 @@ input:checked + .slider:before {
 .features svg {
   width: 20px;
   height: 20px;
-  color: #818cf8;
+  color: #a78bfa;
   flex-shrink: 0;
 }
 
@@ -228,13 +228,13 @@ input:checked + .slider:before {
 }
 
 .btn-primary {
-  background: #fff;
-  color: #050505;
+  background: #c62828;
+  color: #fff;
 }
 
 .btn-primary:hover {
-  background: #e4e4e7;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  background: #a91f2b;
+  box-shadow: 0 0 18px rgba(198, 40, 40, 0.24);
 }
 
 .btn-outline {
@@ -244,8 +244,8 @@ input:checked + .slider:before {
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(167, 139, 250, 0.5);
 }
 
 /* Tablet & Mobile */
@@ -253,4 +253,56 @@ input:checked + .slider:before {
   .pricing-card.highlighted {
     padding: 40px 30px;
   }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="light"] body {
+  background-color: #f4f1f8;
+  color: #2d2635;
+}
+
+:root[data-theme="light"] .pricing-header p,
+:root[data-theme="light"] .toggle-label,
+:root[data-theme="light"] .plan-desc,
+:root[data-theme="light"] .currency,
+:root[data-theme="light"] .period {
+  color: #706779;
+}
+
+:root[data-theme="light"] .toggle-label.active {
+  color: #2d2635;
+}
+
+:root[data-theme="light"] .pricing-card {
+  border-color: #e2dce9;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(44, 32, 54, 0.08);
+}
+
+:root[data-theme="light"] .pricing-card.highlighted {
+  border-color: #bda8d4;
+  background: linear-gradient(180deg, #f1eafa 0%, #fff 100%);
+  box-shadow: 0 0 28px rgba(109, 40, 217, 0.12);
+}
+
+:root[data-theme="light"] .features li {
+  color: #403849;
+}
+
+:root[data-theme="light"] .slider {
+  background-color: #d7cfdf;
+}
+
+:root[data-theme="light"] .btn-outline {
+  border-color: #c9bdd6;
+  color: #3c3148;
+}
+
+:root[data-theme="light"] .btn-outline:hover {
+  border-color: #9c7ab8;
+  color: #34203f;
+  background: #f0eaf6;
 }

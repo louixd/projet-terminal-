@@ -1,45 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tradio - Charts</title>
+  <meta name="theme-color" content="#15111b">
+  <title>Graphiques — Tradio</title>
   <link rel="stylesheet" href="../css/chartpage.css">
 </head>
 <body>
-<div class="tradingview-widget-container" style="height:100%;width:100%">
-  <div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener nofollow" target="_blank"><span class="blue-text">AAPL stock chart</span></a><span class="trademark">&nbsp;by TradingView</span></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-  ({
-  "enableResize": true,
-  "allow_symbol_change": true,
-  "calendar": false,
-  "details": false,
-  "hide_side_toolbar": true,
-  "hide_top_toolbar": false,
-  "hide_legend": false,
-  "hide_volume": true,
-  "hotlist": false,
-  "interval": "D",
-  "locale": "en",
-  "save_image": true,
-  "style": "1",
-  "symbol": "NASDAQ:AAPL",
-  "timezone": "Etc/UTC-5",
-  "backgroundColor": "#0F0F0F",
-  "gridColor": "rgba(242, 242, 242, 0.2)",
-  "watchlist": [],
-  "withdateranges": false,
-  "compareSymbols": [],
-  "support_host": "https://www.tradingview.com",
-  "studies": [],
-  "autosize": true,
-  "upcolor" : "black",
-  "downcolor": "black",
-  })
-  </script>
+  <main class="terminal">
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Tradio, accueil">
+        <span class="brand__mark" aria-hidden="true">T</span>
+        <span>tradio</span>
+      </a>
+      <nav class="topbar__nav" aria-label="Navigation principale">
+        <a class="topbar__link topbar__link--active" href="./graphique.html" aria-current="page">Marchés</a>
+        <a class="topbar__link" href="../index.html">Accueil</a>
+      </nav>
+      <span class="topbar__label">Graphiques TradingView</span>
+    </header>
 
-</div>
+    <section class="chart-section" aria-label="Graphique de marché">
+      <div class="chart-actions" aria-label="Actions de trading">
+        <button id="open-buy-panel" class="chart-action chart-action--buy" type="button">Acheter</button>
+        <button id="open-sell-panel" class="chart-action chart-action--sell" type="button">Vendre</button>
+        <span class="chart-actions__hint">Outils TradingView à gauche · volume activé · ticker à saisir dans le ticket</span>
+      </div>
+      <div class="chart-workspace">
+        <div class="chart-panel">
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer">
+                Graphiques et données du widget par TradingView
+              </a>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+              async
+            >
+            ({
+              "autosize": true,
+              "allow_symbol_change": true,
+              "calendar": false,
+              "details": true,
+              "hide_side_toolbar": false,
+              "hide_top_toolbar": false,
+              "hide_legend": false,
+              "hide_volume": false,
+              "interval": "D",
+              "locale": "fr",
+              "save_image": true,
+              "style": "1",
+              "symbol": "NASDAQ:AAPL",
+              "theme": "dark",
+              "timezone": "Etc/UTC",
+              "backgroundColor": "#15111b",
+              "gridColor": "rgba(148, 163, 184, 0.12)",
+              "overrides": {
+                "mainSeriesProperties.candleStyle.upColor": "#34d399",
+                "mainSeriesProperties.candleStyle.downColor": "#f87171",
+                "mainSeriesProperties.candleStyle.borderUpColor": "#34d399",
+                "mainSeriesProperties.candleStyle.borderDownColor": "#f87171",
+                "mainSeriesProperties.candleStyle.wickUpColor": "#34d399",
+                "mainSeriesProperties.candleStyle.wickDownColor": "#f87171"
+              },
+              "withdateranges": true,
+              "support_host": "https://www.tradingview.com"
+            });
+            </script>
+          </div>
+        </div>
+
+        <aside id="paper-panel" class="paper-panel" aria-labelledby="paper-title" aria-hidden="true" hidden>
+          <header class="paper-panel__header">
+            <div>
+              <p class="paper-panel__eyebrow">SIMULATION · USD</p>
+              <h2 id="paper-title">Ordre simulé</h2>
+            </div>
+            <button id="close-paper-panel" class="paper-panel__close" type="button" aria-label="Fermer le panneau">×</button>
+          </header>
+
+          <p id="paper-auth-notice" class="paper-notice" hidden>
+            <a href="./login.html">Connecte-toi</a> pour ouvrir et retrouver tes positions.
+          </p>
+
+          <div id="paper-content" hidden>
+            <h3 id="paper-mode-title" class="paper-mode-title">Acheter</h3>
+            <div class="paper-metrics">
+              <div class="paper-metric">
+                <span>Valeur du portefeuille</span>
+                <strong id="paper-equity">—</strong>
+              </div>
+              <div class="paper-metric">
+                <span>Liquidités disponibles</span>
+                <strong id="paper-cash">—</strong>
+              </div>
+              <div class="paper-metric paper-metric--pnl">
+                <span>P&amp;L total</span>
+                <strong id="paper-total-pnl">—</strong>
+              </div>
+            </div>
+            <p id="paper-updated-at" class="paper-updated-at">Actualisation horaire</p>
+
+            <form id="paper-order-form" class="paper-order-form">
+              <label>
+                Symbole de l’action
+                <input id="paper-symbol" name="symbol" type="text" value="AAPL" maxlength="15" pattern="[A-Za-z][A-Za-z0-9.-]{0,14}" autocomplete="off" required>
+              </label>
+              <div class="paper-order-form__row">
+                <label>
+                  Quantité
+                  <input id="paper-quantity" name="quantity" type="number" min="0.000001" max="1000000" step="0.000001" value="1" required>
+                </label>
+                <label>
+                  Levier
+                  <select id="paper-leverage" name="leverage">
+                    <option value="1">1×</option>
+                    <option value="2">2×</option>
+                    <option value="5">5×</option>
+                    <option value="10">10×</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                Prix limite · USD / unité
+                <input id="paper-limit-price" name="max_price" type="number" min="0.000001" max="1000000" step="0.000001" inputmode="decimal" placeholder="Saisis ton prix maximum" required>
+              </label>
+              <div class="paper-order-form__row paper-order-form__row--levels">
+                <label>
+                  Take profit · USD
+                  <input id="paper-take-profit" name="take_profit" type="number" min="0.000001" max="1000000" step="0.000001" inputmode="decimal" placeholder="Facultatif">
+                </label>
+                <label>
+                  Stop loss · USD
+                  <input id="paper-stop-loss" name="stop_loss" type="number" min="0.000001" max="1000000" step="0.000001" inputmode="decimal" placeholder="Facultatif">
+                </label>
+              </div>
+              <p class="paper-price-estimate">Montant estimé <strong id="paper-estimated-total">—</strong></p>
+              <p class="paper-order-hint">Si le cours dépasse ta limite, l’ordre reste en attente et la marge est réservée. Les seuils sont vérifiés chaque minute.</p>
+              <button id="paper-buy-button" class="paper-button paper-button--buy" type="submit">Placer l’achat limite</button>
+            </form>
+
+            <p id="paper-message" class="paper-message" role="status" aria-live="polite"></p>
+
+            <section id="paper-pending-orders-section" class="paper-list-section" aria-labelledby="paper-pending-orders-title" hidden>
+              <div class="paper-list-section__heading">
+                <h3 id="paper-pending-orders-title">Achats limites en attente</h3>
+                <span id="paper-pending-order-count">0</span>
+              </div>
+              <ul id="paper-pending-orders" class="paper-positions"></ul>
+            </section>
+
+            <section class="paper-list-section" aria-labelledby="paper-positions-title">
+              <div class="paper-list-section__heading">
+                <h3 id="paper-positions-title">Positions ouvertes</h3>
+                <span id="paper-position-count">0</span>
+              </div>
+              <ul id="paper-positions" class="paper-positions"></ul>
+            </section>
+
+            <details class="paper-history">
+              <summary>Historique récent</summary>
+              <ol id="paper-trades" class="paper-trades"></ol>
+            </details>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="../js/theme.js"></script>
+  <script type="module" src="../js/chart-trading.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 :root {
     color-scheme: dark;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: #f5f5f5;
-    background: #0f0f0f;
+    color: #f2eef6;
+    background: #15111b;
 }
 
 * {
@@ -15,7 +15,7 @@ body {
     padding: 1.5rem;
     display: grid;
     place-items: center;
-    background: #0f0f0f;
+    background: #15111b;
 }
 
 .auth-container {
@@ -23,7 +23,7 @@ body {
     padding: 2rem;
     border: 1px solid #333;
     border-radius: 1rem;
-    background: #191919;
+    background: #211b29;
 }
 
 .auth-container h1,
@@ -48,21 +48,78 @@ body {
 
 .auth-container input {
     color: inherit;
-    background: #101010;
+    background: #19151e;
+}
+
+.auth-container input:focus-visible {
+    border-color: #8b5cf6;
+    outline: 2px solid rgba(139, 92, 246, 0.3);
+    outline-offset: 1px;
 }
 
 .auth-container button {
-    border-color: #41007e;
+    border-color: #c62828;
     color: #fff;
-    background: #41007e;
+    background: #c62828;
     font-weight: 700;
     cursor: pointer;
+    transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.auth-container button:hover:not(:disabled) {
+    border-color: #a91f2b;
+    background: #a91f2b;
+}
+
+.auth-container button:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 2px;
 }
 
 .auth-container a {
-    color: #41007e;
+    color: #a78bfa;
+}
+
+.auth-container a:hover {
+    color: #c4b5fd;
 }
 
 #message {
     min-height: 1.5em;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    color: #2c2533;
+    background: #f1eef5;
+}
+
+:root[data-theme="light"] body {
+    background: #f1eef5;
+}
+
+:root[data-theme="light"] .auth-container {
+    border-color: #ded7e6;
+    color: #2c2533;
+    background: #fff;
+    box-shadow: 0 1.25rem 3rem rgb(39 24 54 / 10%);
+}
+
+:root[data-theme="light"] .auth-container input {
+    border-color: #d7cfdf;
+    color: #30283a;
+    background: #f8f6fa;
+}
+
+:root[data-theme="light"] .auth-container input:focus-visible {
+    border-color: #6d28d9;
+    outline-color: rgba(109, 40, 217, 0.3);
+}
+
+:root[data-theme="light"] .auth-container a {
+    color: #6d28d9;
+}
+
+:root[data-theme="light"] .auth-container a:hover {
+    color: #4c1d95;
 }

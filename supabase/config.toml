@@ -1,0 +1,5 @@
+[functions.paper-trade]
+verify_jwt = false
+
+[functions.refresh-paper-market]
+verify_jwt = false
